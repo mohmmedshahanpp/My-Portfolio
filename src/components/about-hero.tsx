@@ -1,11 +1,8 @@
 import Image from "next/image";
-import Link from "next/link";
-
 import { AnimatePresence } from "framer-motion";
-
 import FadeUp from "@/animation/fade-up";
 import FadeRight from "@/animation/fade-right";
-import heroProfileImg from "@/public/images/heroProfile.png";
+import heroProfileImg from "@/public/images/shahan-removebg-preview.png";
 import DuotoneImage from "./duotone-image";
 
 export default function AboutHero() {
@@ -36,19 +33,15 @@ export default function AboutHero() {
           </FadeUp>
           <FadeUp key="description-1" duration={0.6} delay={0.2}>
             <p className="mt-8 text-base font-medium text-zinc-900 dark:text-zinc-300 sm:text-lg md:text-lg">
-              I turn vision into reality with code. Whether I&apos;m working on
-              a website or any digital product, I bring my commitment to design
-              excellence and user-centered thinking to every project I work on.
-            </p>
-          </FadeUp>
-          <FadeUp key="description-2" duration={0.6} delay={0.4}>
-            <p className="mt-8 text-base font-medium text-zinc-900 dark:text-zinc-300 sm:text-lg md:text-lg">
-              Explore my latest{" "}
-              <Link href="/projects" className="underline underline-offset-4">
-                <span className="text-accent">projects</span>
-              </Link>{" "}
-              showcasing my expertise in Reactjs, Nextjs, Javascript, Typescript
-              and web development.
+              I&apos;m full-stack engineer with expertise in front-end
+              development, back-end development and database design. Proven
+              ability to design and develop scalable, efficient, and
+              maintainable software solutions.
+              <br></br>
+              <br></br>
+              Passionate about staying upto date with emerging technologies and
+              collaborating with cross functional teams to deliver cutting edge
+              products.
             </p>
           </FadeUp>
           <FadeRight
@@ -67,7 +60,7 @@ export default function AboutHero() {
               />
             </div>
             <span className="text-lg font-medium text-foreground">
-              Mumbai, India
+              Kerala, India
             </span>
           </FadeRight>
         </AnimatePresence>
