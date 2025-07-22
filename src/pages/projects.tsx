@@ -48,22 +48,6 @@ export default function Projects() {
               <ProjectCard key={index} {...card} />
             ))}
           </div>
-          <div className="mx-auto mt-16 max-w-5xl text-center text-foreground md:mt-28">
-            <span className="text-xl font-bold md:text-2xl">
-              I am currently building new projects and learning backend
-              development to expand my skill set beyond frontend.
-            </span>
-            <p className="mt-10 text-base md:text-xl">
-              Visit my github to see some of the latest projects{" "}
-              <a
-                href={`${siteMetadata.github}?tab=repositories`}
-                target="_blank"
-                className="font-semibold text-accent underline underline-offset-2 hover:text-accent/70"
-              >
-                Github
-              </a>
-            </p>
-          </div>
         </div>
       </section>
     </>

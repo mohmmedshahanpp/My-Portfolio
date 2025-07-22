@@ -1,6 +1,5 @@
 // import ContactButton from "@/components/contact-form/contact-button";
 import { GithubIcon, LinkedinIcon } from "@/components/icons";
-import { siteMetadata } from "@/data/siteMetaData.mjs";
 
 export default function Footer() {
   return (
@@ -28,7 +27,7 @@ export default function Footer() {
         <span className="text-foreground">©2024 Mohmmed Shahan</span>
         <div className="flex gap-8">
           <a
-            href={siteMetadata.github}
+            href="https://github.com/mohmmedshahanpp"
             target="_blank"
             className="h-6 w-6"
             aria-label="link to Github"
@@ -36,7 +35,7 @@ export default function Footer() {
             <GithubIcon className="text-accent transition-colors duration-150 hover:text-accent-foreground" />
           </a>
           <a
-            href={siteMetadata.linkedin}
+            href="http://www.linkedin.com/in/shahanmohmmed"
             target="_blank"
             className="h-6 w-6"
             aria-label="link to Linkedin"
