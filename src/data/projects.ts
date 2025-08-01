@@ -1,6 +1,5 @@
 import { type ProjectCardProps } from "@/components/projects/project-card";
 import { type ProjectShowcaseListItem } from "@/components/projects/project-showcase-list";
-import { siteMetadata } from "@/data/siteMetaData.mjs";
 
 export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
   {
@@ -52,7 +51,7 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
     ],
     description:
       "My personal portfolio website made using Nextjs, tailwindcss and framer motion.",
-    sourceCodeHref: "https://github.com/mohmmedshahanpp/Portfolio",
-    liveWebsiteHref: siteMetadata.siteUrl,
+    sourceCodeHref: "https://github.com/mohmmedshahanpp/My-Portfolio",
+    liveWebsiteHref: "my-portfolio-drab-two-8qjhvh4bxl.vercel.app",
   },
 ];
