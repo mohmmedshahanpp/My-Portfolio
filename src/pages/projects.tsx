@@ -16,12 +16,6 @@ export default function Projects() {
           title: "Discover Projects by Mohmmed Shahan - Software Developer",
           description:
             "Explore a showcase of projects crafted by Mohmmed Shahan, a Software Developer. Witness the fusion of creativity and technology in web development.",
-          // images: [
-          //   {
-          //     url: `${siteMetadata.siteUrl}${siteMetadata.twitterImage}`,
-          //     alt: "Mohmmed Shahan - Portfolio Image",
-          //   },
-          // ],
           siteName: siteMetadata.siteName,
           type: "website",
         }}
@@ -29,7 +23,7 @@ export default function Projects() {
           {
             property: "keywords",
             content:
-              "Projects,Amit Portfolio, Software Developer, React Developer, Frontend Developer, Web Development, JavaScript, HTML, CSS, UI/UX, Web Applications, Responsive Design",
+              "Projects,Portfolio, Software Developer, React Developer, Frontend Developer, Web Development, JavaScript, HTML, CSS, UI/UX, Web Applications, Responsive Design",
           },
         ]}
       />

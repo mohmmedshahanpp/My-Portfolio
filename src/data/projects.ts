@@ -9,8 +9,8 @@ export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
     href: "/projects",
     tags: ["JavaScript", "Bootstrap", "CSS", "HTML"],
     image: {
-      LIGHT: "/images/projects/jsontreeLight.webp",
-      DARK: "/images/projects/jsontreeDark.webp",
+      LIGHT: "/images/projects/movie1.png",
+      DARK: "/images/projects/movie2.png",
     },
   },
   {
@@ -27,8 +27,8 @@ export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
       "Vercel",
     ],
     image: {
-      LIGHT: "/images/projects/manyGamesLight.webp",
-      DARK: "/images/projects/manyGamesDark.webp",
+      LIGHT: "/images/projects/Portfolio.png",
+      DARK: "/images/projects/Portfolio2.png",
     },
   },
 ];
@@ -36,26 +36,23 @@ export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
 export const PROJECTS_CARD: ProjectCardProps[] = [
   {
     name: "Movie App",
-    favicon: "/images/projects/logos/jsontree.ico",
-    imageUrl: [
-      "/images/projects/jsontreeLight.webp",
-      "/images/projects/jsontreeDark.webp",
-    ],
+    favicon: "/images/projects/movieicon.ico",
+    imageUrl: ["/images/projects/movie1.png", "/images/projects/movie2.png"],
     description:
-      "Visualize JSON data format in form of a tree or graph. Application is made using Nextjs, Tailwindcss and Monaco Editor. Design image can be downloaded from this app.",
-    sourceCodeHref: "https://github.com/BUMBAIYA/jsontree",
-    liveWebsiteHref: "https://jsontree.vercel.app",
+      "A responsive and interactive movie listing web application built using React.js and Bootstrap. The platform allows users to explore movies with categorized filters such as Popular Movies, Latest Movies, and Comedy Movies.",
+    sourceCodeHref: "https://github.com/mohmmedshahanpp/Movie-Project",
+    liveWebsiteHref: "https://movie-project-henna-three.vercel.app/",
   },
   {
     name: "My portfolio",
-    favicon: "/favicon.ico",
+    favicon: "/images/projects/portfolioicon.png",
     imageUrl: [
-      "/images/projects/portfolio.JPG",
-      "/images/projects/portfolio2.JPG",
+      "/images/projects/portfolio.png",
+      "/images/projects/portfolio2.png",
     ],
     description:
       "My personal portfolio website made using Nextjs, tailwindcss and framer motion.",
-    sourceCodeHref: "https://github.com/BUMBAIYA/amitchauhan-v2",
+    sourceCodeHref: "https://github.com/mohmmedshahanpp/Portfolio",
     liveWebsiteHref: siteMetadata.siteUrl,
   },
 ];

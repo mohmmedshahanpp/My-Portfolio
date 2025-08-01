@@ -51,7 +51,7 @@ export default function LandingHero() {
                 high-performance, user-focused web applications. Skilled in{" "}
                 <span className="font-semibold text-accent">ReactJS</span>,{" "}
                 <span className="font-semibold text-accent">JavaScript</span>,{" "}
-                <span className="font-semibold text-accent">TypeScipt</span>{" "}
+                <span className="font-semibold text-accent">TypeScript</span>{" "}
               </div>
             </FadeUp>
           </AnimatePresence>
