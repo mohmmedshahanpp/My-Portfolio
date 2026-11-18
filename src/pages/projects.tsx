@@ -3,19 +3,20 @@ import { NextSeo } from "next-seo";
 import ProjectCard from "@/components/projects/project-card";
 import { PROJECTS_CARD } from "@/data/projects";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
+import { PROFILE } from "@/data/profile";
 
 export default function Projects() {
   return (
     <>
       <NextSeo
-        title="Projects by Mohmmed Shahan - Software Developer Portfolio"
-        description="Explore a collection of projects by Mohmmed Shahan, a seasoned Software Developer. From innovative web applications to responsive interfaces, discover the depth and diversity of my work."
+        title={`Projects by ${PROFILE.name} | Full Stack Developer`}
+        description="Explore HGEC ERP, Fixbrix, and personal projects by Mohmmed Shahan PP, built with React, Node.js, MySQL, and REST APIs."
         canonical={`${siteMetadata.siteUrl}/projects`}
         openGraph={{
           url: `${siteMetadata.siteUrl}/projects`,
-          title: "Discover Projects by Mohmmed Shahan - Software Developer",
+          title: `Projects by ${PROFILE.name} | Full Stack Developer`,
           description:
-            "Explore a showcase of projects crafted by Mohmmed Shahan, a Software Developer. Witness the fusion of creativity and technology in web development.",
+            "Explore HGEC ERP, a multi-tenant ERP desktop application, Fixbrix, a construction management web application, and personal projects.",
           siteName: siteMetadata.siteName,
           type: "website",
         }}

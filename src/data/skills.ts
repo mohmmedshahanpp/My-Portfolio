@@ -1,20 +1,16 @@
-import { SiExpress, SiNextdotjs } from "react-icons/si";
-import { FramerMotionIcon, ReactRouterDomIcon } from "@/components/icons";
+import { SiElectron, SiExpress, SiGithubactions } from "react-icons/si";
+import { FiCheckCircle, FiServer } from "react-icons/fi";
 import { type SkillsShowcaseProps } from "@/components/skills/skills-showcase";
 import HtmlSvg from "@/public/icons/html.svg";
 import CsssSvg from "@/public/icons/css.svg";
 import JavascriptSvg from "@/public/icons/javascript.svg";
 import TypescriptSvg from "@/public/icons/typescript.svg";
 import ReactjsSvg from "@/public/icons/reactjs.svg";
-import Zustand from "@/public/icons/Zustand.svg";
-import TailwindcssSvg from "@/public/icons/tailwindcss.svg";
-import MuiSvg from "@/public/icons/mui.svg";
-import ViteSvg from "@/public/icons/vite.svg";
+import ReduxSvg from "@/public/icons/redux.svg";
 import NodejsSvg from "@/public/icons/nodejs.svg";
 import mysql from "@/public/icons/mysql.svg";
 import GitSvg from "@/public/icons/git.svg";
-// import AwsSvg from "@/public/icons/aws.svg";
-import PostmanSvg from "@/public/icons/postman.svg";
+import AwsSvg from "@/public/icons/aws.svg";
 
 export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
   {
@@ -29,49 +25,45 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
         icon: CsssSvg,
       },
       {
-        name: "Javascript",
+        name: "JavaScript",
         icon: JavascriptSvg,
       },
       {
-        name: "Typescript",
+        name: "TypeScript",
         icon: TypescriptSvg,
       },
     ],
   },
   {
-    sectionName: "Libraries and Frameworks",
+    sectionName: "Frontend Libraries",
     skills: [
       {
-        name: "Reactjs",
+        name: "React.js",
         icon: ReactjsSvg,
       },
       {
-        name: "Nextjs",
-        icon: SiNextdotjs,
+        name: "Redux",
+        icon: ReduxSvg,
       },
       {
-        name: "React Router Dom",
-        icon: ReactRouterDomIcon,
+        name: "React Query",
+        icon: ReactjsSvg,
       },
       {
-        name: "Zustand",
-        icon: Zustand,
+        name: "React Hook Form",
+        icon: ReactjsSvg,
       },
       {
-        name: "MUI",
-        icon: MuiSvg,
+        name: "TanStack Table",
+        icon: ReactjsSvg,
       },
       {
-        name: "Framer motion",
-        icon: FramerMotionIcon,
+        name: "Yup",
+        icon: FiCheckCircle,
       },
       {
-        name: "Vite",
-        icon: ViteSvg,
-      },
-      {
-        name: "Tailwindcss",
-        icon: TailwindcssSvg,
+        name: "Zod",
+        icon: FiCheckCircle,
       },
     ],
   },
@@ -79,17 +71,21 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
     sectionName: "Backend",
     skills: [
       {
-        name: "Nodejs",
+        name: "Node.js",
         icon: NodejsSvg,
       },
       {
-        name: "Express",
+        name: "Express.js",
         icon: SiExpress,
+      },
+      {
+        name: "REST APIs",
+        icon: FiServer,
       },
     ],
   },
   {
-    sectionName: "Databases and ORMs",
+    sectionName: "Databases",
     skills: [
       {
         name: "MySQL",
@@ -104,13 +100,17 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
         name: "Git",
         icon: GitSvg,
       },
-      // {
-      //   name: "AWS",
-      //   icon: AwsSvg,
-      // },
       {
-        name: "Postman",
-        icon: PostmanSvg,
+        name: "GitHub Actions",
+        icon: SiGithubactions,
+      },
+      {
+        name: "Electron.js",
+        icon: SiElectron,
+      },
+      {
+        name: "AWS S3",
+        icon: AwsSvg,
       },
     ],
   },

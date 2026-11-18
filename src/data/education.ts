@@ -2,33 +2,30 @@ import { type ExperienceShowcaseListItemProps } from "@/components/experience/ex
 
 export const EDUCATION: ExperienceShowcaseListItemProps[] = [
   {
-    title: "BTech in Computer Science Engineering",
+    title: "B.Tech in Computer Science",
     organisation: {
-      name: "Malabar Institute Of Technology",
-      // href: "https://eng.rizvi.edu.in/",
+      name: "Malabar Institute of Technology",
     },
     date: "2017-2021",
     location: "Anjarakkandy, Kannur",
-    description: "CGPA: 6.7",
+    description: "Kerala Technological University",
   },
   {
-    title: "Higher Secondary School          ",
+    title: "Higher Secondary Education (Class 12)",
     organisation: {
       name: "GHSS, Chirakkara",
-      // href: "https://www.mithibai.ac.in/",
     },
     date: "2015-2017",
     location: "Thalassery, Kannur, Kerala",
-    description: "Percentage: 71% ",
+    description: "Higher secondary education at GHSS, Chirakkara.",
   },
   {
-    title: "Secondary School Education",
+    title: "Secondary Education (Class 10)",
     organisation: {
-      name: "MMHSS THALASSERY",
-      // href: "https://holyfamilyandheri.org/",
+      name: "MMHSS, Thalassery",
     },
     date: "2015",
     location: "Thalassery, Kannur, Kerala",
-    description: "Percentage: 84% ",
+    description: "Secondary education at MMHSS, Thalassery, Kannur.",
   },
 ];

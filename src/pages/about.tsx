@@ -5,19 +5,19 @@ import ExperienceShowcaseList from "@/components/experience/experience-showcase-
 import { EXPERIENCE } from "@/data/experience";
 import { EDUCATION } from "@/data/education";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
+import { PROFILE } from "@/data/profile";
 
 export default function About() {
   return (
     <>
       <NextSeo
-        title="About Mohmmed Shahan | Software Developer"
-        description="Learn more about Mohmmed Shahan, a dedicated Software Developer with 2 years of experience. Discover the journey, skills, and passion that drive me to create innovative and user-friendly web solutions."
+        title={`About ${PROFILE.name} | ${PROFILE.role}`}
+        description={PROFILE.summary}
         canonical={`${siteMetadata.siteUrl}/about`}
         openGraph={{
           url: `${siteMetadata.siteUrl}/about`,
-          title: "Learn About Mohmmed Shahan - Software Developer",
-          description:
-            "Dive into the story of Mohmmed Shahan, a Software Developer. Uncover the experiences, skills, and passion that fuel a commitment to delivering exceptional web solutions.",
+          title: `About ${PROFILE.name} | ${PROFILE.role}`,
+          description: PROFILE.summary,
           // images: [
           //   {
           //     url: `${siteMetadata.siteUrl}${siteMetadata.twitterImage}`,
@@ -38,6 +38,26 @@ export default function About() {
       <AboutHero />
       <ExperienceShowcaseList title="Experience" details={EXPERIENCE} />
       <ExperienceShowcaseList title="Education" details={EDUCATION} />
+      <section className="px-6 pb-20 sm:px-14 md:px-20">
+        <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-2">
+          <div>
+            <h2 className="text-2xl font-bold text-accent">Certifications</h2>
+            <ul className="mt-4 space-y-2 text-foreground">
+              {PROFILE.certifications.map((certification) => (
+                <li key={certification}>{certification}</li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h2 className="text-2xl font-bold text-accent">Languages</h2>
+            <ul className="mt-4 space-y-2 text-foreground">
+              {PROFILE.languages.map((language) => (
+                <li key={language}>{language}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

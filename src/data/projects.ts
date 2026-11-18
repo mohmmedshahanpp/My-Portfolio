@@ -4,27 +4,33 @@ import { type ProjectShowcaseListItem } from "@/components/projects/project-show
 export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
   {
     index: 0,
+    title: "HGEC ERP",
+    href: "/projects#hgec-erp",
+    tags: ["React", "Node.js", "MySQL", "Desktop ERP"],
+    description: "A multi-tenant ERP desktop application.",
+  },
+  {
+    index: 1,
+    title: "Fixbrix",
+    href: "/projects#fixbrix",
+    tags: ["React", "REST APIs", "Serverless"],
+    description: "A multi-tenant construction management web application.",
+  },
+  {
+    index: 2,
     title: "Movie App",
     href: "/projects",
-    tags: ["JavaScript", "Bootstrap", "CSS", "HTML"],
+    tags: ["React", "JavaScript", "Bootstrap", "CSS", "HTML"],
     image: {
       LIGHT: "/images/projects/movie1.png",
       DARK: "/images/projects/movie2.png",
     },
   },
   {
-    index: 1,
+    index: 3,
     title: "Portfolio",
     href: "/projects",
-    tags: [
-      "Reactjs",
-      "Tailwindcss",
-      "Scss",
-      "Vite",
-      "React-router-dom",
-      "Redux",
-      "Vercel",
-    ],
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
     image: {
       LIGHT: "/images/projects/Portfolio.png",
       DARK: "/images/projects/Portfolio2.png",
@@ -33,6 +39,22 @@ export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
 ];
 
 export const PROJECTS_CARD: ProjectCardProps[] = [
+  {
+    id: "hgec-erp",
+    name: "HGEC ERP",
+    category: "Professional project",
+    tags: ["React", "Node.js", "MySQL"],
+    description:
+      "A multi-tenant ERP desktop application built with React, Node.js, and MySQL.",
+  },
+  {
+    id: "fixbrix",
+    name: "Fixbrix",
+    category: "Professional project",
+    tags: ["React", "REST APIs", "Serverless backend"],
+    description:
+      "A multi-tenant construction management web application built with React, REST APIs, and a serverless backend.",
+  },
   {
     name: "Movie App",
     favicon: "/images/projects/movieicon.ico",
@@ -46,8 +68,8 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
     name: "My portfolio",
     favicon: "/images/projects/portfolioicon.png",
     imageUrl: [
-      "/images/projects/portfolio.png",
-      "/images/projects/portfolio2.png",
+      "/images/projects/Portfolio.png",
+      "/images/projects/Portfolio2.png",
     ],
     description:
       "My personal portfolio website made using Nextjs, tailwindcss and framer motion.",

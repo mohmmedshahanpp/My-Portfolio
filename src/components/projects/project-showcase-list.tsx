@@ -9,7 +9,8 @@ export type ProjectShowcaseListItem = {
   title: string;
   href: string;
   tags: string[];
-  image: {
+  description?: string;
+  image?: {
     LIGHT: string;
     DARK?: string;
   };
@@ -66,6 +67,11 @@ export default function ProjectShowcaseList(props: ProjectShowcaseListProps) {
         <p className="max-w-xl text-base font-semibold text-muted-foreground sm:text-lg">
           {props.data.tags.map((tag) => `#${tag} `)}
         </p>
+        {props.data.description && (
+          <p className="max-w-xl text-base text-foreground">
+            {props.data.description}
+          </p>
+        )}
       </div>
     </motion.div>
   );

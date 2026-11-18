@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 import FadeUp from "@/animation/fade-up";
+import { PROFILE } from "@/data/profile";
 
 export default function LandingHero() {
   const [scrollY, setScrollY] = useState(0);
@@ -39,19 +40,31 @@ export default function LandingHero() {
           <AnimatePresence>
             <FadeUp key="title-main" duration={0.6}>
               <h1 className="bg-accent bg-clip-text py-2 text-5xl font-bold text-transparent sm:text-6xl md:text-7xl xl:text-8xl">
-                Mohmmed Shahan
+                {PROFILE.name}
               </h1>
               <span className="text-xl font-semibold text-zinc-900 dark:text-zinc-100 md:text-3xl">
-                Fullstack Developer
+                {PROFILE.role}
               </span>
             </FadeUp>
             <FadeUp key="description" duration={0.6} delay={0.2}>
               <div className="mt-8 max-w-3xl text-base font-semibold text-zinc-900 dark:text-zinc-200 sm:text-base md:text-xl">
-                I am a fullstack developer specializing in building
-                high-performance, user-focused web applications. Skilled in{" "}
-                <span className="font-semibold text-accent">ReactJS</span>,{" "}
-                <span className="font-semibold text-accent">JavaScript</span>,{" "}
-                <span className="font-semibold text-accent">TypeScript</span>{" "}
+                {PROFILE.summary}
+              </div>
+              <div className="pointer-events-auto mt-6 flex flex-wrap items-center gap-4 text-sm font-semibold text-accent sm:text-base">
+                <span className="text-foreground">{PROFILE.location}</span>
+                <a
+                  className="underline underline-offset-4"
+                  href={PROFILE.resume}
+                  download
+                >
+                  Download resume
+                </a>
+                <a
+                  className="break-all underline underline-offset-4"
+                  href={`mailto:${PROFILE.email}`}
+                >
+                  {PROFILE.email}
+                </a>
               </div>
             </FadeUp>
           </AnimatePresence>

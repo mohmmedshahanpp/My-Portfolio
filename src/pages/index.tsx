@@ -6,19 +6,19 @@ import ProjectShowcase from "@/components/projects/project-showcase";
 import { PROJECT_SHOWCASE } from "@/data/projects";
 import { SKILLS_DATA } from "@/data/skills";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
+import { PROFILE } from "@/data/profile";
 
 export default function Home() {
   return (
     <>
       <NextSeo
-        title="Mohmmed Shahan | Software Developer"
-        description="Explore the professional portfolio of Mohmmed Shahan, a skilled Software Developer with 2 years of hands-on experience. Discover innovative projects, expertise in modern web technologies, and a passion for creating seamless user experiences."
+        title={`${PROFILE.name} | ${PROFILE.role}`}
+        description={PROFILE.summary}
         canonical={siteMetadata.siteUrl}
         openGraph={{
           url: siteMetadata.siteUrl,
-          title: "Mohmmed Shahan - Software Developer",
-          description:
-            "Dive into the world of web development with Mohmmed Shahan. Discover a Software Developer with 2 years of expertise, showcasing cutting-edge projects and a commitment to crafting exceptional user interfaces.",
+          title: `${PROFILE.name} | ${PROFILE.role}`,
+          description: PROFILE.summary,
           // images: [
           //   {
           //     url: `${siteMetadata.siteUrl}${siteMetadata.twitterImage}`,
@@ -32,7 +32,7 @@ export default function Home() {
           {
             property: "keywords",
             content:
-              "React Developer, Software Developer, Frontend Developer, Web Developer, JavaScript, HTML, CSS, Portfolio, UI/UX, React.js, Frontend Development, Web Development, JavaScript Developer, Responsive Design",
+              "Full Stack Developer, Software Developer, React.js, Node.js, Electron.js, TypeScript, Redux, Express.js, MySQL, Bengaluru, Portfolio",
           },
         ]}
       />

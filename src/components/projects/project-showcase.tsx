@@ -23,6 +23,8 @@ export default function ProjectShowcase(props: ProjectShowcaseProps) {
   const images = useMemo(() => {
     return generateImageData(props.projects);
   }, [props.projects]);
+  const currentProject = props.projects[currentImage];
+  const currentProjectImage = images[currentImage];
 
   const handleAnimate = (index: number) => {
     if (index === currentImage) return;
@@ -34,42 +36,44 @@ export default function ProjectShowcase(props: ProjectShowcaseProps) {
       <div className="relative mx-auto max-w-7xl">
         <div className="relative right-0 top-0 hidden lg:block">
           <AnimatePresence>
-            <motion.div
-              key={props.projects[currentImage].title}
-              initial={{ x: "100%", opacity: 0 }}
-              animate={{
-                x: "55%",
-                y: "50%",
-                opacity: 1,
-                transition: {
-                  duration: 0.5,
-                },
-              }}
-              transition={{
-                type: "spring",
-                stiffness: 100,
-              }}
-              className="absolute right-0 top-0 -z-50"
-            >
-              <Image
-                src={images[currentImage].LIGHT}
-                unoptimized
-                width={100}
-                height={100}
-                className="h-auto w-1/2 rounded-lg border border-zinc-300 shadow-lg dark:hidden dark:border-accent/50"
-                alt={`project ${currentImage}`}
-              />
-              {images[currentImage].DARK !== undefined && (
+            {currentProjectImage && (
+              <motion.div
+                key={currentProject.title}
+                initial={{ x: "100%", opacity: 0 }}
+                animate={{
+                  x: "55%",
+                  y: "50%",
+                  opacity: 1,
+                  transition: {
+                    duration: 0.5,
+                  },
+                }}
+                transition={{
+                  type: "spring",
+                  stiffness: 100,
+                }}
+                className="absolute right-0 top-0 -z-50"
+              >
                 <Image
-                  src={images[currentImage].DARK!}
+                  src={currentProjectImage.LIGHT}
                   unoptimized
                   width={100}
                   height={100}
-                  className="hidden h-auto w-1/2 rounded-lg border border-zinc-300 shadow-lg dark:inline-block dark:border-accent/20 dark:shadow-lg dark:shadow-emerald-400/5"
-                  alt={`project ${currentImage}`}
+                  className="h-auto w-1/2 rounded-lg border border-zinc-300 shadow-lg dark:hidden dark:border-accent/50"
+                  alt={`${currentProject.title} preview`}
                 />
-              )}
-            </motion.div>
+                {currentProjectImage.DARK !== undefined && (
+                  <Image
+                    src={currentProjectImage.DARK}
+                    unoptimized
+                    width={100}
+                    height={100}
+                    className="hidden h-auto w-1/2 rounded-lg border border-zinc-300 shadow-lg dark:inline-block dark:border-accent/20 dark:shadow-lg dark:shadow-emerald-400/5"
+                    alt={`${currentProject.title} preview`}
+                  />
+                )}
+              </motion.div>
+            )}
           </AnimatePresence>
         </div>
         <h2 className="text-xl font-semibold text-accent sm:text-3xl">
@@ -108,6 +112,11 @@ export default function ProjectShowcase(props: ProjectShowcaseProps) {
                   <span key={index}>#{tag}</span>
                 ))}
               </p>
+              {proj.description && (
+                <p className="max-w-xl text-base text-foreground">
+                  {proj.description}
+                </p>
+              )}
             </Link>
           ))}
         </div>

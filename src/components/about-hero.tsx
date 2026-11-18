@@ -3,6 +3,7 @@ import { AnimatePresence } from "framer-motion";
 import FadeUp from "@/animation/fade-up";
 import FadeRight from "@/animation/fade-right";
 import heroProfileImg from "@/public/images/shahan-removebg-preview.png";
+import { PROFILE } from "@/data/profile";
 import DuotoneImage from "./duotone-image";
 
 export default function AboutHero() {
@@ -16,7 +17,7 @@ export default function AboutHero() {
               width={100}
               height={100}
               className="h-auto w-full px-0 xl:px-16"
-              alt="hero image"
+              alt={PROFILE.name}
               lightColor="#E0FFFF"
               darkColor="#004D4D"
               unoptimized
@@ -28,21 +29,40 @@ export default function AboutHero() {
         <AnimatePresence>
           <FadeUp key="title-greeting" duration={0.6}>
             <h1 className="text-6xl font-bold text-accent sm:text-7xl md:text-6xl lg:text-5xl xl:text-7xl">
-              Hi, I&apos;m Mohmmed Shahan
+              Hi, I&apos;m {PROFILE.name}
             </h1>
           </FadeUp>
           <FadeUp key="description-1" duration={0.6} delay={0.2}>
             <p className="mt-8 text-base font-medium text-zinc-900 dark:text-zinc-300 sm:text-lg md:text-lg">
-              I&apos;m full-stack engineer with expertise in front-end
-              development, back-end development and database design. Proven
-              ability to design and develop scalable, efficient, and
-              maintainable software solutions.
+              {PROFILE.summary}
               <br></br>
               <br></br>
-              Passionate about staying upto date with emerging technologies and
-              collaborating with cross functional teams to deliver cutting edge
-              products.
+              At Gitbitz Software Pvt Ltd., I build React interfaces, integrate
+              REST APIs, design MySQL schemas, and deliver Electron desktop
+              applications. I also mentor interns and contribute to
+              architecture, planning, and code reviews.
             </p>
+            <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm font-medium text-accent sm:text-base lg:justify-start">
+              <a
+                className="break-all underline underline-offset-4"
+                href={`mailto:${PROFILE.email}`}
+              >
+                {PROFILE.email}
+              </a>
+              <a
+                className="underline underline-offset-4"
+                href={PROFILE.phoneHref}
+              >
+                {PROFILE.phone}
+              </a>
+              <a
+                className="underline underline-offset-4"
+                href={PROFILE.resume}
+                download
+              >
+                Download resume
+              </a>
+            </div>
           </FadeUp>
           <FadeRight
             key="hero-location"
@@ -60,7 +80,7 @@ export default function AboutHero() {
               />
             </div>
             <span className="text-lg font-medium text-foreground">
-              Kerala, India
+              {PROFILE.location}
             </span>
           </FadeRight>
         </AnimatePresence>
